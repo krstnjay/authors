@@ -73,11 +73,11 @@
             ];
 
             $this->validate($request, $rules);
-            $authors = Author::findOrFail($id);
+            $authors = Authors::findOrFail($id);
 
             $authors->fill($request->all());
             // if no changes happen
-            if ($author->isClean()) {
+            if ($authors->isClean()) {
                 return $this->errorResponse('At least one value must change', Response::HTTP_UNPROCESSABLE_ENTITY);
             }
             $authors->save();

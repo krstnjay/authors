@@ -10,7 +10,7 @@ class Authors extends Model {
         'id', 'fullname', 'gender', 'birthday',
     ];
 
-    public $timestamp = false;
+    public $timestamps = false;
     protected $primaryKey = 'id';
 }
 
