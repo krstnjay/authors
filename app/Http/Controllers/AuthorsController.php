@@ -92,7 +92,7 @@
          public function delete($id){
              $author = Authors::findOrFail($id);
              $author->delete();
-             return $this->errorResponse('Author ID Does Not Exists', Response::HTTP_NOT_FOUND);
+             return $this->successResponse($author);
          }
 
 }
